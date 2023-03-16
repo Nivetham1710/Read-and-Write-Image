@@ -23,18 +23,26 @@ End the program and close the output image windows.
 ### Register Number: 
 i) #To Read,display the image
 ```
+import cv2
+color= cv2.imread('rose.jpg',1)
+cv2.imshow('nivetha212221240034',color)
+cv2.waitKey(0)
   
 
 ```
 ii) #To write the image
 ```
-
+import cv2
+color= cv2.imread('rose.jpg',-1)
+cv2.imwrite('rose.jpg',color)
 
 
 ```
 iii) #Find the shape of the Image
 ```python3
-
+import cv2
+color=cv2.imread('rose.jpg',1)
+print(color.shape)
 
 
 ```
@@ -42,13 +50,26 @@ iv) #To access rows and columns
 
 ```python3
 
-
+import cv2
+import random
+img= cv2.imread('rose.jpg',-1)
+for i in range(300):
+    for j in range(img.shape[1]):
+        img[i][j] = [random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+cv2.imshow('nivetha212221240034',img)
+cv2.waitKey(0)
 
 ```
 v) #To cut and paste portion of image
 ```python3
 
-
+import cv2
+img1=cv2.imread('rose.JPG',-1)
+copied_portion=img1[10:60,10:120]
+img1[110:160,110:220]=copied_portion
+cv2.imshow('nivetha212221240034',img1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 ```
 
@@ -56,26 +77,22 @@ v) #To cut and paste portion of image
 
 ### i) Read and display the image
 
-<br>
-<br>
+![output](./img1.png)
 
 ### ii)Write the image
+![output](./img2.png)
 
-<br>
-<br>
 
 ### iii)Shape of the Image
+![output](./img3.png)
 
-<br>
-<br>
 
 ### iv)Access rows and columns
-<br>
-<br>
+![output](./img4.png)
 
 ### v)Cut and paste portion of image
-<br>
-<br>
+![output](./img5.png)
+
 
 ## Result:
 Thus the images are read, displayed, and written successfully using the python program.
